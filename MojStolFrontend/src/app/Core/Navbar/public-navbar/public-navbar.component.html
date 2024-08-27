@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg bg-light border sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">MojStol</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Restorani</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" >Gradovi</a>
+        </li>
+        <li class="nav-item">
+          <!-- enable za logovanog -->
+          <ng-container *ngIf="isLoggedIn; else disabledLink">
+            <a class="nav-link" routerLink="/favorite">Omiljeno</a>
+          </ng-container>
+        
+          <!-- Disable za ne logovanog -->
+          <ng-template #disabledLink>
+            <a class="nav-link disabled" aria-disabled="true">Omiljeno</a>
+          </ng-template>
+        </li>
+        
+      </ul>
+
+      <!-- Conditionally display buttons based on login status -->
+      <form class="d-flex" role="search">
+        <ng-container *ngIf="!isLoggedIn; else loggedInTemplate">
+          <a class="btn btn-danger me-2" routerLink="/login">Login</a>
+          <a class="btn btn-outline-danger" routerLink="/register">Register</a>
+        </ng-container>
+
+        <!-- Template for logged-in user -->
+        <ng-template #loggedInTemplate>
+          <div class="dropdown">
+            <button class="btn btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+              Hi, {{ userName }}
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li>
+                <a class="dropdown-item">Profile</a>
+              </li>
+              <li>
+                <a class="dropdown-item text-danger" (click)="logout()">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </ng-template>
+      </form>
+    </div>
+  </div>
+</nav>

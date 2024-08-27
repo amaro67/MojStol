@@ -1,0 +1,103 @@
+<app-public-navbar></app-public-navbar>
+
+<div class="container-fluid bg-dark py-5">
+    <div class="container bg-light py-5 text-center">
+        <p class="fs-1">Trazis stol? Pronadi ga ovdje!</p>
+        <div class="row bg-danger py-5">
+            <div class="col-12 col-lg-4 bg-success py-3">
+                <div class="dropdown w-75 mx-auto">
+                    <button class="btn btn-secondary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Kategorije restorana
+                    </button>
+                    <ul class="dropdown-menu w-100">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+            </div>
+            <div class="col-12 col-lg-4 bg-warning py-3">
+                <div class="dropdown w-75 mx-auto">
+                    <button class="btn btn-secondary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Lokacije restorana
+                    </button>
+                    <ul class="dropdown-menu w-100">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+            </div>
+            <div class="col-12 col-lg-4 bg-success py-3">
+                <button type="button" class="btn btn-danger w-75">Pronadi restoran!</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ovdje izlistati sve restorane po kategorijama -->
+
+<!-- Template za izlistavanje restorana po kategorijama -->
+<div class="container-fluid py-5 border">
+    <div class="container ">
+        <p class="fs-3 text-danger">Omiljeni restorani u Bosni i Hercegovini</p>
+        <hr class="border-dark">
+    </div>
+</div>
+
+
+<div class="container-fluid bg-light py-5">
+    <div class="container">
+        <p class="fs-3 text-danger">Izaberite grad</p>
+        <hr class="border-dark">
+        <div class="row"> 
+            <!-- Ovdje izlistati sve gradove koje imamo u bazi, vode na prikaz svih restorana u tom gredu -->
+            <div class="col-6 col-lg-3 py-2">
+                <a class="text-decoration-none opacity-75 text-dark fs-5" href="#">Sarajevo</a>
+            </div>
+            <div class="col-6 col-lg-3 py-2">
+                <a class="text-decoration-none opacity-75 text-dark fs-5" href="#">Sarajevo</a>
+            </div>
+            <div class="col-6 col-lg-3 py-2">
+                <a class="text-decoration-none opacity-75 text-dark fs-5" href="#">Sarajevo</a>
+            </div>
+            <div class="col-6 col-lg-3 py-2">
+                <a class="text-decoration-none opacity-75 text-dark fs-5" href="#">Sarajevo</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="container-fluid bg-light py-5 border">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-4 text-center">
+                <!-- Dodati sliku sa figme -->
+                <p>Imas prijedlog za nasu aplikaciju?</p>
+                <!-- Vodi na slanje maila supportu -->
+                <button class="btn btn-transparent text-danger">Predlozi restoran!</button> 
+            </div>
+            <div class="col-12 col-lg-4 text-center">
+                <!-- Dodati sliku sa figme -->
+
+                <!-- Vodi na registraciju restorana -->
+                <button class="btn btn-transparent text-danger">Pridružite nam se!</button> 
+                <p>Pridružite se stotinama restorana koji koriste naše usluge!</p>
+            </div>
+            <div class="col-12 col-lg-4 text-center">
+                <!-- Dodati sliku sa figme -->
+                <p>Vise informacija o nasoj aplikaciji mozete pogledati</p>
+                <button class="btn btn-transparent text-danger">Klikom ovdje!</button> 
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<app-footer></app-footer>
